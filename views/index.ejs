@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Trash habbits maker</h1>
+    </div>
+    <div class="main">
+      <form class="form" method="post" action="/">
+        <h2 class="heading-for-form">Add habbit</h2>
+        <div class="input-area">
+          <input type="text" class="form-control" name="title" placeholder="Input trash title">
+          <select class="btn" name="type">
+            <option value="Health">Health</option>
+            <option value="Sport">Sport</option>
+            <option value="Skills">Skills</option>
+            <option value="Hobby">Hobby</option>
+            <option value="Mind">Mind</option>
+          </select>
+        </div>
+        <button type="submit" class="btn create">Create</button>
+      </form>
+  
+      <div class="habbits-cards" id="habbits-cards">
+        <% if (trashHabbits.length) { %>
+          <% trashHabbits.forEach(({ title, type, id}) => { %>
+            <div class="habbit-card">
+              <div class="habbit-type"><%= type %></div>
+              <div class="habbit-title"><%= title %></div>
+              <button class="btn delete" id="btn-delete"data-id="<%= id %>">Delete</button>
+            </div>
+          <% }) %>
+        <% } %>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const delBtn = document.querySelectorAll('#btn-delete')
+    delBtn.forEach((item) => {
+      item.addEventListener('click', (e) => {
+        const id = e.target?.dataset?.id || null
+        if (id) {
+          fetch(`/${id}`, {
+            method: 'DELETE'
+          }).then(() => {
+            window.location.reload()
+          })
+        }
+      })
+    })
+  </script>
+</body>
+</html>
