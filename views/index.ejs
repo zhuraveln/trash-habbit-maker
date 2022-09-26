@@ -28,7 +28,7 @@
             <div class="habbit-card">
               <div class="habbit-type"><%= type %></div>
               <div class="habbit-title"><%= title %></div>
-              <button class="btn delete" id="btn-delete"data-id="<%= id %>">Delete</button>
+              <button class="btn delete" id="btn-delete" data-id="<%= id %>">Delete</button>
             </div>
           <% }) %>
         <% } %>
@@ -40,8 +40,8 @@
   <script>
     const delBtn = document.querySelectorAll('#btn-delete')
     delBtn.forEach((item) => {
-      item.addEventListener('click', (e) => {
-        const id = e.target?.dataset?.id || null
+      item.addEventListener('click', (item) => {
+        const id = item.target.dataset.id
         if (id) {
           fetch(`/${id}`, {
             method: 'DELETE'

@@ -1,14 +1,10 @@
 const express = require('express')
-// const chalk = require('chalk');
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 require('dotenv').config()
 const trashHabbitRoutes = require('./routes/trash-habbits-routes')
 const trashApiHabbitRoutes = require('./routes/api-trash-habbits-routes')
 const createPath = require('./helpers/create-path')
-
-// const errorMsg = chalk.bgKeyword('white').redBright
-// const successMsg = chalk.bgKeyword('green').white
 
 const app = express()
 
@@ -33,6 +29,9 @@ app.use(trashHabbitRoutes)
 app.use(trashApiHabbitRoutes)
 
 app.use((req, res) => {
-  res.status(404)
-  res.render(createPath('error'), { title })
+  const title = 'Error page'
+  res
+    .status(404)
+    .render(createPath('error-page'), { title })
 })
+

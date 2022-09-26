@@ -12,6 +12,6 @@ const trashHabbitSchema = new Schema({
   }
 }, { timestamps: true })
 
-const TrashHabbit = mongoose.model('TrashHabbit', trashHabbitSchema)
+const TrashHabbit = mongoose.model('trashhabbits', trashHabbitSchema)
 
 module.exports = TrashHabbit

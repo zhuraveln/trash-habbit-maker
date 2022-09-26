@@ -8,7 +8,11 @@ const getTrashHabbits = (req, res) => {
   TrashHabbit
     .find()
     .sort({ createdAt: -1 })
-    .then((trashHabbits) => res.status(200).json(trashHabbits))
+    .then((trashHabbits) => {
+      res
+        .header('Access-Control-Allow-Origin', '*')
+        .status(200).json(trashHabbits)
+    })
     .catch((error) => handlError(error))
 }
 
