@@ -1,12 +1,6 @@
-# 🌝 SSR and REST API for "You can!"
+# 🌝 SSR app and REST API
 
 powered by 💚 **Node.JS**
-
-**[you-can](https://github.com/zhuraveln/you_can)** (github)
-
-## 👀 Demo
-
-- **[trash-habit-maker](https://trash-habbits-maker.herokuapp.com/)** (heroku)
 
 ## 🛠 Tech Stack
 
@@ -17,8 +11,12 @@ powered by 💚 **Node.JS**
 
 ## ⚡️ Features
 
-- Create and save habit in MongoDB
-- REST API
+- Create and save habits in MongoDB for button `random` in **[you-can](https://you-can.vercel.app/)** (vercel)
+- REST API for **[you-can](https://github.com/zhuraveln/you_can)** (github)
+
+## 👀 Demo
+
+- **[trash-habit-maker](https://trash-habbits-maker.herokuapp.com/)** (heroku)
 
 ## 🏗 API Reference
 
