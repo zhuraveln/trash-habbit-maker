@@ -21,7 +21,7 @@ const postTrashHabbit = (req, res) => {
   const trash_habbit = new TrashHabbit({ title, type })
   trash_habbit
     .save()
-    .then((trashHabbit) => res.status(200).json(trashHabbit))
+    .then((trashHabbit) => res.json(trashHabbit))
     .catch((error) => handlError(error))
 }
 

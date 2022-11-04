@@ -25,6 +25,8 @@ app.use(express.urlencoded(({ express: false })))
 
 app.use(express.static('styles'))
 
+app.use(express.json())
+
 app.use(trashHabbitRoutes)
 app.use(trashApiHabbitRoutes)
 

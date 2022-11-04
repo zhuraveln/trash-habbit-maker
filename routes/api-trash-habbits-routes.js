@@ -8,10 +8,10 @@ const {
 const router = express.Router()
 
 // Get All Trash Habbits
-router.get('/api/', getTrashHabbits)
+router.get('/api', getTrashHabbits)
 
 // Post Trash Habbit
-router.post('/api/', postTrashHabbit)
+router.post('/api', postTrashHabbit)
 
 // Delete Trash Habbit
 router.delete('/api/:id', deleteTrashHabbit)

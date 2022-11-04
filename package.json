@@ -6,7 +6,11 @@
   "scripts": {
     "dev": "nodemon server.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhuraveln/trash-habbit-maker.git"
+  },
+  "author": "Zhuravel Nikita",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.2",
