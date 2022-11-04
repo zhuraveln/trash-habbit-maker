@@ -20,13 +20,13 @@ powered by 💚 **Node.JS**
 
 ## 🏗 API Reference
 
-### Get All Trash Habbits
+### Get All Trash Habits
 
 ```bash
   GET /api
 ```
 
-### Post Trash Habbit
+### Create Trash Habit
 
 ```bash
   POST /api
@@ -36,7 +36,7 @@ powered by 💚 **Node.JS**
 | :--------------------------- | :----- |
 | `{ "title": "","type": "" }` | `JSON` |
 
-### Delete Trash Habbit
+### Delete Trash Habit
 
 ```bash
   DELETE /api/${id}
